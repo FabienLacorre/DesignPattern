@@ -61,15 +61,17 @@ int MilkDecorator::GetCoast() const {
 int main(){
 	// coffe coast 10 //
 	Coffe coffe(10);
+	std::cout << "Price of a coffe: " << coffe.GetCoast() << std::endl;
 	// We add milk decorator on coffe //
 	MilkDecorator milkyCoffe(coffe, 5);
+	std::cout << "Price of milky coffe: " << milkyCoffe.GetCoast() << std::endl;
 	// We add again milk decorator on milky coffe //
 	MilkDecorator doublemilkyCoffe(milkyCoffe, 5);
+	std::cout << "Price of double milky coffe: "<< doublemilkyCoffe.GetCoast() << std::endl;
 	/*
 	 When we print coast of double milky coffe we have 20 
 	 This is a price of coffe + milk + milk
 	 Coffre is wrap twice by milk 
 	*/
-	std::cout << doublemilkyCoffe.GetCoast() << std::endl;
 	return (0);
 }
