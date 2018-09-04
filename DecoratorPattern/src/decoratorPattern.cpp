@@ -59,12 +59,26 @@ int MilkDecorator::GetCoast() const {
 // --------- //
 
 int main(){
+	std::cout << std::endl;
+	std::cout << "\033[32mThis design pattern allows to wrap object to another to reduce subclasses creation\033[0m" << std::endl;
+	std::cout << std::endl;
+
 	// coffe coast 10 //
 	Coffe coffe(10);
 	std::cout << "Price of a coffe: " << coffe.GetCoast() << std::endl;
+
+	std::cout << std::endl;
+	std::cout << " - Wrap with creation of decorator \"MilkDecorator milkyCoffe(coffe, 5);\"" << std::endl;
+	std::cout << std::endl;
+
 	// We add milk decorator on coffe //
 	MilkDecorator milkyCoffe(coffe, 5);
 	std::cout << "Price of milky coffe: " << milkyCoffe.GetCoast() << std::endl;
+
+	std::cout << std::endl;
+	std::cout << " - Wrap again with creation of decorator \"MilkDecorator doublemilkyCoffe(milkyCoffe, 5);\"" << std::endl;
+	std::cout << std::endl;
+
 	// We add again milk decorator on milky coffe //
 	MilkDecorator doublemilkyCoffe(milkyCoffe, 5);
 	std::cout << "Price of double milky coffe: "<< doublemilkyCoffe.GetCoast() << std::endl;
