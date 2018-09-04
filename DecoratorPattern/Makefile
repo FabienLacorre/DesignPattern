@@ -1,6 +1,6 @@
 NAME	= DecoratorPattern
 
-SRC	= ./src/main.cpp
+SRC	= ./src/decoratorPattern.cpp
 
 OBJ	 = $(SRC:.cpp=.o)
 
